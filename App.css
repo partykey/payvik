@@ -1,0 +1,8 @@
+//@font-face {
+//  font-family: "Times New Roman";   /*Can be any text*/
+//  src: local("Times New Roman"),
+//    url("./fonts/times.ttf") format("truetype");
+//}
+.font-face-gm {
+  font-family: "TimesNewRoman";
+}

@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hide input number spinners */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* --- Neo-Bento & Glassmorphism Checkout Styles --- */
+
+.bento-grid-container {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+
+.bento-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bento-card:hover {
+  transform: translateY(-4px);
+}
+
+.qr-wrapper {
+  transition: filter 0.6s ease, opacity 0.6s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.qr-label {
+  margin-top: 16px;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: -0.02em;
+  color: #666;
+  font-weight: 500;
+}
+
+.validated-blur {
+  filter: blur(8px);
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* Glassmorphism Success State */
+.glass-success-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  animation: fadeScaleIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.success-icon {
+  background: #000;
+  color: #fff;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+}
+
+.success-text {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #000;
+  letter-spacing: -0.03em;
+}
+
+@keyframes fadeScaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+} .w-full .wallet-adapter-dropdown > .wallet-adapter-button {
+    background-color: #22C55E !important;
+    color: white !important;
+}
