@@ -1,5 +1,6 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
+import { Analytics } from '@vercel/analytics/react';
 import Layout from '../components/Layout'
 import Head from 'next/head'
 import {
@@ -53,6 +54,7 @@ function MyApp({ Component, pageProps }: AppProps) {
               <title>P &Lambda; Y V I K | Digital E-Commerce Platform | Digital Dollar Merchant Account | Instant USDC Payments</title>
             </Head>
             <Component {...pageProps} />
+         <Analytics />
         </Layout>
         </WalletModalProvider>
       </WalletProvider>
